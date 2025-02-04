@@ -1,0 +1,1176 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: white;
+  --pink:#FF90E8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+button {
+  font-family: "Roboto", serif;
+  font-weight: 300 !important;
+  cursor:pointer;
+
+}
+p{
+  margin: 0;
+  line-break: anywhere;
+}
+.feedButtons>button{
+  outline: none;
+  background-color: none;
+  font-size: 1.5vw;
+  border: none;
+  background-color: white;
+}
+.feedButtons{
+  margin-top: 2vw;
+  animation: 1s all;
+  display: flex;
+  justify-content: space-between;  
+}
+input {
+  display: block;
+  
+  padding: .75vw;
+  background-color: white;
+  font-size: 1vw;
+  will-change: transform;
+  
+  transition: all 1s;
+  border:none;
+  border: black .1vw solid;
+  outline: none;
+  /* -webkit-box-shadow: inset 0px 0px 165px -100px rgba(0,0,0,1);
+  -moz-box-shadow: inset 0px 0px 165px -100px rgba(0,0,0,1);
+  box-shadow: inset 0px 0px 165px -100px rgba(0,0,0,1); */
+}
+/* input:focus{
+  outline: none;
+  -webkit-box-shadow: 10px 10px 0px -3px var(--pink);
+-moz-box-shadow: 10px 10px 0px -3px var(--pink);
+box-shadow: 10px 10px 0px -3px var(--pink);
+  position: relative;
+  animation: displaceInput .5s ease-in;
+  transform: translate(-.2vw,-.2vw);
+  
+
+} */
+@keyframes displaceInput {
+  0% {
+    transform: translate(0vw,0vw);
+  }
+  
+  100% {
+    transform: translate(-.2vw,-.2vw);
+  }
+  
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: white;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+  color: black;
+  font-family: "Fascinate", serif;
+}
+h2{
+  font-family: "Roboto", serif;
+  color: black;
+  font-size: 1.5vw;
+}
+#sideBarTitle{
+  font-size: 2.5vw;
+  line-height: 1.1;
+  margin-left: 1.4vw;
+  margin-bottom: 0;
+}
+.title{
+  font-size: 2.5em;
+  line-height: 1.1;
+
+  color: black;
+  text-align: center;
+  margin: 0;
+
+}
+label{
+  margin-top: 1vw;
+  align-self: flex-start;
+  pointer-events: none;
+  font-size: calc(1vh * 2);
+  color: black;
+  font-weight: bolder;
+}
+input:active label{
+  opacity: 0;
+}
+.landingDiv{
+padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(225, 225, 225);
+}
+.landingDiv>button{
+  align-self: end;
+}
+.landingDiv>p{
+  align-self: flex-end;
+}
+.landingInputDiv{
+  margin-top: 1vw;
+}
+.submitLandingFormButton{
+  width: 100%;
+  padding: .7vw;
+  font-size: 1rem;
+  margin-top: 1vw;
+  color: white;
+  background-color: black;
+  border-radius: .5vw;
+}
+.submitLandingFormButton:hover{
+  background-color: white;
+  color: black;
+}
+.submitLandingFormButton:active{
+  background-color: var(--pink);
+}
+.landingDiv>form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.smallButton{
+  color: var(--pink);
+  text-decoration: solid var(--pink) underline;
+  font-size: .7vw;
+  border: none;
+
+}
+p{
+  color: black;
+  margin-bottom: none;
+}
+li{
+  color: #07070A;
+  font-size: 1rem;
+  list-style-type: square;
+
+}
+.feed{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.post{
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  
+  width: 25vw;
+  pointer-events: auto;
+  /* border: 1px solid rgb(220, 220, 220);
+  background-color: white; */
+}
+
+.postAvatar{
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  float: left;
+  margin-right: .5vw;
+  object-fit: cover;
+}
+.postUserInfo{
+  display: flex;
+  align-items: center;
+
+}
+.postText{
+  font-size: .8vw;
+  
+}
+#postText{
+  border: #949494 1px solid !important;
+  flex: 1;
+}
+.thumbsUp{
+  height: 1.5vw;
+  width: 1.5vw;
+  
+  background-color: white;
+}
+.likeButton:hover .thumbsUp{
+  filter: scale(1.5);
+}
+.filter::after{
+  transform: scale(2);
+}
+.likeButton{
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  padding-left: 0;
+  font-weight: lighter;
+  font-size: .7vw;
+}
+.postUsername{
+  font-size: .8vw;
+  font-weight: 600;
+  float: left;
+  margin-right: .5vw;
+}
+.postDate{
+  font-size: .7vw;
+  color: #585858;
+  margin-left: .5vw;
+}
+.postDivImg{
+  justify-content: center;
+  background-color: black;
+  margin-top: .5vw;
+  margin-bottom: .5vw;
+  width: 100%;
+  height: 30vw;
+}
+.postImg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#postImg{
+  flex: 2;
+}
+.postInteractions{
+  display: flex;
+  margin-right: 1vw;
+  align-items: center;
+  margin-top: .5vw;
+  gap: 1vw;
+  margin-bottom: .5vw;
+  
+}
+.followingDiv{
+  position:absolute;padding:1vw;top:0;right:10vw;overflow:auto
+}
+.follow{
+  display: flex;
+  padding-bottom: 1vw;
+  border: .1vw solid rgb(224, 224, 224);
+  width: 20vw;
+  padding: 1vw;
+  margin-bottom: .5vw;
+  text-align: center;
+  align-items: center;
+  font-size: 1vw;
+}
+.followList{
+  height: 50vh;
+  overflow: auto;
+}
+.uploadButton{
+  background-color:#FF90E8;font-weight:bold;border-radius:10PX;padding:.3vw;
+  font-size:1rem;
+  color:WHITE;
+  width:30%;
+  align-self:center;
+  border:none
+}
+.uploadImg{
+  width:3vw;height:3vw;align-self:center
+}
+.postComments{
+  align-items: center;
+  padding: 1vw;
+  padding-bottom: 0;
+  margin-bottom: .5vw;
+}
+.postComments>p{
+  font-size: .8vw;
+  font-weight: 400;
+  margin-right: .5vw;
+}
+.postCommentName{
+  font-weight: 700 !important;
+  margin-right: 1vw;
+  font-size: .8vw;
+  float: left;
+}
+.postCommentsDiv{
+  
+}
+.accountSettings h4{
+  font-size: 1.2vw;
+  margin-left: 2vw;
+  
+}
+.post button{
+  margin-bottom: .5vw;
+  color: #949494;
+  padding: 0;
+  font-size: .8rem;
+  border: none;
+  pointer-events: all;
+  background-color: white;
+}
+.commentsPostDiv>button:hover{
+  text-decoration: underline 1px #949494;;
+}
+.postCommentsDiv>p{
+  margin-top: .5vw;
+  margin-left: 1vw;
+  color: gray;
+
+}
+.emptyCommentsPostDiv{
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 1vw;
+}
+.postButton{
+  width: 100%;
+  padding: .5vw;
+  font-weight: bolder;
+  margin-top: .2vw;
+}
+
+.commentPost{
+  resize: none;
+  flex-basis: 80%;
+  border: solid rgb(220, 220, 220) 1px;
+}
+.leaveComment{
+  display: flex;
+}
+.postComment{
+  /* display: flex;
+  align-items: baseline; */
+}
+.leaveComment>button{
+  flex-basis: 20%;
+  border: solid rgb(220, 220, 220) 1px;
+  color: #FF90E8;
+  background-color: white;
+  font-weight: 700 !important;
+  font-size: .7vw;
+}
+.leaveComment::after{
+  border-bottom: solid #FF90E8 1px;
+}
+.bigComment{
+  display: flex;
+  padding-top: 1vw;
+  border-top: #cfcece 1px solid;
+  padding: 1vw;
+}
+.bigComment>button{
+  flex-basis: 20%;
+  border: solid rgb(220, 220, 220) 1px;
+  font-size: 1vw !important;
+}
+.bigComment>textarea{
+  outline: none;
+  border: none;
+}
+.viewFullPost{
+  color: #FF90E8;
+  text-align: end;
+  border: none;
+  align-items: end;
+  width: 100%;
+  background: none;
+  margin-bottom:1vw;
+  padding-right:1vw
+}
+.likeButton>p{
+  position: relative;
+  right: .5vw;
+  top: .5vw;
+}
+.likeCount{
+  font-size: .8vw;
+  font-weight: bold;
+  
+  margin-top: .5vw;
+}
+.bigPost{
+  display: flex;
+  height: 97%;
+  margin: 1vw;
+  width: 67vw;
+  z-index: 3;
+  -webkit-box-shadow: 0px 0px 300px 200px rgba(181,181,181,1);
+-moz-box-shadow: 0px 0px 300px 200px rgba(181,181,181,1);
+box-shadow: 0px 0px 300px 200px rgba(181,181,181,1);
+animation: popIn .3s;
+}
+.bigPostImg{
+  background-color: black;
+}
+.bigPostImg>img{
+  height: 100%;
+  width: 100%;
+
+}
+.bigPostUserInfo{
+  display: flex;
+  align-items: center;
+  padding: 1vw;
+  padding-bottom: .5vw;
+  padding-left: 1vw;
+  flex-basis: 4%;
+  border-bottom: 1px solid gainsboro;
+}
+.postInfoDiv{
+  flex-basis: 42%;
+  display: flex;
+  flex-direction: column;
+}
+.commentsInter{
+
+}
+.bigPostComments{
+  flex-basis: 75%;
+  overflow: auto;
+}
+.bigPostInteractions{
+  flex-basis: 20%;
+  display: flex
+  ;
+  margin-top: 1vw;
+      flex-direction: column;
+}
+.bigPostInteractions>p{
+  font-weight: lighter;
+  font-size: .8vw;
+  margin-left: .5rem;
+  margin-bottom: .5vw;
+}
+.bigPostInteractions>div>p{
+  font-weight: bold;
+  font-size: .8vw;
+  margin-left: .5rem;
+  
+}
+.closeBigPost:hover{
+  filter: brightness(1.5);
+  cursor:pointer;
+
+}
+  
+.leaveComment{
+  padding-bottom: 1vw;
+  border-bottom: #e2e2e2 .5px solid;
+}
+.leaveComment>textarea{
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 0;
+}
+.feedUserTab{
+  align-items: center;
+  display: flex;
+border:1px solid rgb(210, 210, 210);
+position: fixed;
+padding: .5vw;
+width: 15vw;
+}
+.feedUserTab:hover{
+  border: 1px solid var(--pink);
+}
+
+.sideBar{
+  display: flex;
+  height: 97%;
+  left: 0;
+  width: 24vw;
+  flex-direction: column;
+  z-index: 1;
+  height: 100%;
+  
+}
+.sideBarButton{
+  font-size: .9vw;
+  font-weight: 350 !important;
+  align-items: center;
+  border: 0;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  height: 1.7vw;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.sideBarButtons:hover {
+  background-color: #FF90E8;
+}
+#sideBarButtons{
+  flex: .4;
+  
+  border: px solid black;
+}
+.sideBarButton>img{
+  width: 1.7vw;
+  margin-left: .5vw;
+  height: 1.7vw;
+  margin-right: .5vw;
+
+  background-color: none;
+}
+.searchInput{
+  padding: 1vw;
+  margin: 1vw;
+  border-radius: 30px;
+  flex: 1;
+  outline: none;
+  background-color: #eaeaea;
+}
+#searchContent{
+  
+  width: 100%;
+}
+#searchContent>div>img{
+  height: 2.5vw;
+  width:  2.5vw;
+}
+.findUser:hover{
+  background-color: #eaeaea;
+}
+.findUser:hover p{
+  text-decoration: underline  ;
+  
+}
+.findUser{
+  cursor:pointer;
+  align-items: center;
+  font-size: 1vw !important;
+ }
+.createPost{
+  display: flex;
+  -webkit-box-shadow: 0px 0px 300px 200px rgba(181,181,181,1);
+-moz-box-shadow: 0px 0px 300px 200px rgba(181,181,181,1);
+box-shadow: 0px 0px 300px 200px rgba(181,181,181,1);
+animation: popIn .3s ;
+/* padding:1vw; */
+flex-direction:column;
+border-radius:10px;
+position:fixed;
+z-index:3;
+height: 70%;
+background-color: white;
+align-items: center;
+margin-top: 5vw;
+width: 30vw;
+}
+.accountSettings{
+  display: flex;
+  -webkit-box-shadow: 0px 0px 300px 200px rgba(181,181,181,1);
+-moz-box-shadow: 0px 0px 300px 200px rgba(181,181,181,1);
+box-shadow: 0px 0px 300px 200px rgba(181,181,181,1);
+animation: popIn .3s ;
+/* padding:1vw; */
+flex-direction:column;
+border-radius:10px;
+position:fixed;
+z-index:2;
+height: 70%;
+background-color: white;
+align-items: center;
+width: 30vw;
+margin-top: 5vw;
+}
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.profileData{
+  padding: 2vw;
+  display: flex;
+}
+.profileData>img{
+  height: 8.5vw;
+  width: 8.5vw;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  margin-right: 4vw;
+}
+/* .profilePosts{
+
+} */
+.profilePosts>img{
+  
+  border-radius: 0;
+    height: 15vw;
+  width: 15vw;
+  object-fit: cover;
+  background-color: #07070A;
+  
+}
+.profilePosts:hover .postImg{
+  filter: brightness(.5);
+}
+.profilePostsContainer{
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  display: flex;
+  padding-bottom: 2vw;
+  justify-content: center;
+}
+.profilePosts{
+
+  overflow: hidden;
+  height: 15vw;
+  width:15vw;
+  
+  justify-content: center;
+}
+textarea::placeholder {
+  font-size: .8vw;
+}
+textarea{
+  font-family: "Roboto", serif;
+    font-size: .9vw;
+}
+.openedSideBar{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  border-right:.1vw solid rgb(212, 212, 212)
+}
+.openedSideBar>div>form{
+
+
+  display: flex;
+}
+.updateAvatar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5vw;
+  flex-direction: column;
+  
+}
+.updateAvatar>button{
+  font-size: 1rem !important;
+}
+.updateAvatar>img{
+  width: 3.5vw;
+  height: 3.5vw;
+  object-fit: cover;
+  border-radius: 50%;
+  border: #e4e4e4 .2vw solid;
+
+}
+.updateAvatar>img:hover{
+  filter: brightness(.5);
+}
+.updateInput{
+  padding: 0;
+  outline: none;
+  border: none;
+}
+.updateInput:focus{
+
+}
+.settingsButton{
+  background-color: none;
+  color: #FF90E8;
+  font-weight: bolder;
+  font-size: 1vw;
+}
+.settingsButton:active {
+  font-size: .7vw;
+  font-weight: 900 !important;
+  color: var(--pink);
+  background-color: white;
+}
+.followingButton {
+  background-color: #e4e4e4;
+  border: 0;
+  padding: .5vw;
+  border: 0;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: .8vw;
+}
+.followingButton:hover{
+  background-color: #c8c8c8;
+}
+.notFollowingButton {
+  font-size: .8vw;
+  background-color: var(--pink);
+  font-weight: bold;
+  color: white;
+  border: 0;
+  padding: .5vw;
+  border-radius: 10px;
+}
+.notFollowingButton:hover{
+  background-color: #07070A;
+}
+.postStats{
+  
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vw;
+  width: 15vw;
+  opacity: 0;
+}
+.postStats>p{
+  font-size: 1.2vw;
+  color: white;
+}
+.emptyPosts{
+  width: 20vw;
+  justify-content: center;
+  position:absolute;top:40vh;
+  width: 10vw;
+  justify-content: center;
+  position: absolute;
+  display: flex
+;
+}
+.emptyPosts>img{
+  width: 2vw;
+  height: 2vw;
+}
+.emptyPosts>p{
+  font-size: 1vw;
+}
+.profilePosts:hover .postStats{
+  opacity: 1;
+}
+.loading{
+animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+  
+}
+.acceptRequest{
+  background-color: #FF90E8;
+  color: white;
+  border: none;
+  font-size: 1vw;
+  font-weight: 700;
+}
+.acceptRequest:hover{
+  background-color: #f966dc;
+}
+.rejectRequest{
+  background-color: #cfcece;
+  color: white;
+  border: none;
+  font-size: 1vw;
+  font-weight: 700;
+
+}
+.rejectRequest:hover{
+  background-color: #585858;
+}
+.landingFather{
+  width:100%;
+  height:100%;
+  align-items:center;
+  display:flex
+}
+.landingDiv>p{
+  font-size: .8rem;
+}
+.landingDiv>p>button{
+  font-size: .8rem;
+}
+.findUsername{
+  font-size: 1rem !important;
+}
+.createPostIcons{
+  height:1.5vw;width:1.5vw;border-radius:50%;padding:.5VW;
+  background-color: white;
+  filter: drop-shadow(0 0 1.300px black);
+}
+.postBody{
+  margin-bottom: .5vw;
+}
+@media only screen and (max-width: 640px) {
+  .findUser>img{
+    height: 8vw !important;
+    width: 8vw !important;
+  }
+  .feedButtons>button{
+    font-size: 3vw;
+  }
+  .followingDiv{
+    display: none;
+  }
+  .findUsername{
+    font-size: 1rem !important;
+  }
+  h2{
+    font-size: 3.5vw !important;
+  }
+  .emptyPosts>img{
+    width: 4vw;
+    height: 4vw;
+  }
+  .emptyPosts>p{
+    font-size: 2vw;
+  }
+  .postUserInfo>P{
+    font-size: 2.5vw  !important;
+  }
+  .searchInput{
+    font-size: 2.5vw;
+  }
+  .commentButton{
+    font-size: 3vw !important;
+  }
+  .bigComment>button{
+    font-size: 3vw !important;
+    font-weight: bolder;
+  }
+  .bigPostInteractions>p{
+    font-size: 2vw;
+  }
+  .bigComment>textarea{
+    font-size: 5vw;
+  }
+  .landingFather{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items: unset;    
+  }
+  .postComments{
+    display: flex;
+    gap: 1vw;
+    align-items: self-start;
+
+  }
+  .findUser p{
+    font-size: 2vw !important;
+  }
+  .findUser{
+    flex-wrap: wrap;
+  }
+  .postComments>img{
+flex-grow: unset;
+  }
+  .sideBarButton>.postAvatar{
+    border-radius: 0;
+  }
+  .createPostIcons{
+    height: 5vw !important;
+    width: 5vw !important;
+  }
+  .closeBigPost{
+    height: 6vw !important;
+    width: 6vw !important;
+  }
+  .uploadImg{
+    height: 7vw !important;
+    width: 7vw !important;
+  }
+  .settingInput{
+    font-size: 2.5vw;
+  }
+  .updateButton{
+    font-size: 2.5vw !important;
+  }
+  .landingDiv{
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin: 2vw;
+    width: 90vw;
+  }
+  .landingDiv>.title{
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+  }
+  .landingFather label{
+    display: none;
+  }
+  .landingFather input{
+    height: 3vh;
+    width: 70%;
+    font-size: 2.5vh;
+    margin-bottom: 3vh;
+    font-size: 1.5vh;
+    padding: .5vh;
+  }
+  .submitLandingFormButton{
+    height: 5vh;
+    border-radius: 20px;
+    font-size: 2vh;
+  }
+  .accountSettings textarea{
+    font-size: 3vw;
+  }
+  .accountSettings h4{
+    font-size: 3vw;
+  }
+  .sideBarButton>p{
+    display: none;
+  }
+  .sideBarButton>h1{
+    display: none;
+  }
+  .sideBarButton img{
+    height:100%;
+    width: 100%;
+  }
+  .sideBarButton{
+    height: calc(5vw + 2vh);
+    width: calc(5vw + 2vh);
+    justify-content: center;
+  }
+  .sideBarButtons{
+    padding-top: 10vw !important;
+  }
+  .topButtons{
+    align-items: center;
+  }
+  .bottomButtons{
+    align-items: center;
+  }
+  .profileData>img{
+    height: 18.5vw;
+    width: 18.5vw;
+  }
+  .profileUser p{
+    font-size: 2vw !important;
+  }
+  .followingButton{
+    font-size: 2vw !important;
+    padding: 1vw;
+  }
+  .bigPost{
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: scroll;
+    z-index: 3;
+  }
+
+  .bigPostUserInfo img {
+    height: 10vw;
+    width: 10vw;
+  }
+  .bigPostUserInfo p{
+    font-size: 5vw;
+  }
+  .bigPostComments img {
+    height: 10vw;
+    width: 10vw;
+  }
+  .bigPostComments p {
+    font-size: 5vw;
+
+  }
+  .bigPostIcons{
+    justify-content: end;
+    margin-left: .5vw;
+  }
+  .bigPostIcons img {
+    height: 10vw;
+    width: 10vw;
+  }
+  .bigPostInteractions>div>p{
+    font-size: 3vw;
+  }
+  .commentButton{
+    font-size: 2vw !important;
+    background-color: white !important;
+  }
+  .post{
+    width: 50vw;
+  }
+  .postDivImg{
+    height: 80vw;
+  }
+  .postAvatar{
+    height: 8vw;
+    width: 8vw;
+  }
+  .post p{
+    font-size: 2vw;
+  }
+  .post>button{
+    font-size: .4rem;
+  }
+  .openedSideBar{
+    background-color: white;
+  }
+  .thumbsUp{
+    height: 5vw;
+    width: 5vw;
+  }
+  .postBody>p{
+    font-size: 2vw;
+  }
+  .postComments>p{
+    font-weight: 400;
+    flex-basis: 15%;
+  }
+  .fullCommentText{
+    flex-grow: 1;
+  }
+  .post>p{
+    font-size: 1.5vw !important;
+  }
+  .leaveComment>button{
+    font-size: 2vw !important;
+  }
+  .leaveComment>textarea{
+    font-size: 2vw !important;
+  }
+  .commentsPostDiv>button{
+    font-size: 2vw;
+  }
+  .accountSettings{
+    width: 90vw;
+    margin: 0;
+    height: 100%;
+  }
+  .updateAvatar>img{
+   width: 15vw; 
+   height: 15vw;
+  }
+  .accountSettings h3{
+    font-size: 2.5vw !important;
+  }
+  .createPost{
+    width: 90vw;
+    height: 80%;
+  }
+  textarea::placeholder {
+    font-size: 2.5vw;
+  }
+
+}
+.bigPostIcons{
+margin-left: .3vw;
+}
+#postImg{
+
+}
+/* @media only screen and (max-width: 1020px) {
+  .followingDiv{
+    right: 0;
+  }
+} */
+@media only screen and (max-width: 768px) {
+  .landingDiv{
+    width: 80vw;
+    height: 80vh;
+  }
+  .followingDiv{
+
+  }
+  .landingFather input{
+    height: 3vh;
+    width: 70%;
+    font-size: 2.5vh;
+    margin-bottom: 3vh;
+    font-size: 1.5vh;
+    padding: .5vh;
+  }
+.submitLandingFormButton{
+  font-size: 2vw;
+}
+}
+.accountSettings h3{
+  border-bottom:1px solid black;color:black;width:100%;text-align:center;
+  font-size: 1.5vw;
+}
+.settingInput{
+  color:black;
+  overflow: visible;
+  border:none;
+  border-bottom: rgb(219, 219, 219) .1vw solid;
+  background-color: 0 !important;
+  padding:.5vw;
+  flex:1
+}
+.settingInput:focus{
+  border-bottom: rgb(0, 0, 0) .1vw solid;
+
+}
+.settingInput::placeholder {
+  color: black;
+}
+
+.settingInput::-ms-input-placeholder { /* Edge 12 -18 */
+  color: black;
+}
+.accountSettings button {
+  font-size: .7vw;
+  font-weight: 900 !important;
+  color: var(--pink);border: none;
+  background-color: white;
+  flex: 1;
+}
+.accountSettings textarea{
+flex:1;
+background-color: none;
+resize:none;
+width:100%;
+padding:.5vw;
+border-bottom: .1vw solid rgb(219, 219, 219) ;
+}
+.accountSettings:focus textarea{
+  border-bottom: .1vw solid black;
+}
+#alert{
+  position: fixed;
+  z-index: 3;
+  color: white;
+  background-color: black;
+  color: white !important;
+  font-size: 1vw;
+  font-weight: 700;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+
+}
+#alert>p{
+  color: white !important;
+}
