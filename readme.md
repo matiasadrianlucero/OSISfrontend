@@ -23,3 +23,5 @@ A social media app where users can create publications containing an image,descr
 -Search users and access their profiles by using the search tab.<br>
 -Access a profile by clicking their names on the search tab or a post.<br>
 
+# Backend
+https://github.com/matiasadrianlucero/OSISbackend/tree/main
